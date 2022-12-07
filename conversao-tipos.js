@@ -1,5 +1,6 @@
 let n1 = "oi";
 // n1 = parseFloat(n1);
+// caso queira limitar o tamanho de casas decimais em float, usar .toFixed()
 
 let n2 = 2;
 
