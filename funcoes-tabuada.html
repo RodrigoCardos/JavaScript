@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tabuada</title>
+	<style>
+		html {
+			background: #1e2439;
+			color: rgb(255, 255, 255);
+		}
+	</style>
+</head>
+<body>
+	<h1>Funções - Tabuada</h1>
+	<p>Esta tabuada consiste em fazer a multiplicação do valor desejado de 1 a 1000.</p>
+	<p>Funciona para números inteiros e/ou reais maiores que 0.</p>
+
+	<button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+	<button onclick="limparTabuada()">Limpar Tabuada</button>
+	<p></p>
+	<div id="output"></div>
+
+	<script>
+		const output = document.getElementById("output")
+
+		// função para mostrar Tabuada e limpar tabuada
+		function mostrarTabuada() {
+			let n = Number(prompt("Digite qualquer número:"))
+			let msg = " "
+			if (n > 0) {
+				for (let i = 1; i <= 1000; i++) {
+					msg += `${n} x ${i} = ${(i * n)} <br>`
+				}
+			}
+			output.innerHTML = msg
+		}
+
+		function limparTabuada() {
+			output.innerHTML = "Tabuada limpa."
+		}
+		// toda informação que vem da interface do usuario é string, seria bom converter em numero
+		// fazer a function e onclick do limpar tabuada
+		
+	</script>
+</body>
+</html>
